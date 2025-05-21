@@ -20,7 +20,7 @@
     "start": "react-native start",
     "example": "npm --cwd example",
     "build": "bob build",
-    "ci:publish": "npm semantic-release"
+    "ci:publish": "npm run semantic-release"
   },
   "keywords": [
     "react-native",
