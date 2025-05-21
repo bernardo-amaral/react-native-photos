@@ -19,7 +19,7 @@
   "scripts": {
     "start": "react-native start",
     "example": "npm --cwd example",
-    "prepare": "bob build",
+    "build": "bob build",
     "ci:publish": "npm semantic-release"
   },
   "keywords": [
