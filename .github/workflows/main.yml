@@ -36,7 +36,7 @@ jobs:
       - name: Publish to NPM
         if: github.repository == 'bernardo-amaral/rn-image-picker' && github.ref == 'refs/heads/main'
         run: |
-          npm ci:publish
+          npm run ci:publish
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
