@@ -19,7 +19,7 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-          
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
@@ -27,16 +27,16 @@ jobs:
 
       - name: Install dependencies
         run: |
-          yarn install
+          npm install
 
       - name: Build
         run: |
-          yarn prepare
+          npm run build
 
       - name: Publish to NPM
-        if: github.repository == 'react-native-image-picker/react-native-image-picker' && github.ref == 'refs/heads/main'
+        if: github.repository == 'bernardo-amaral/rn-image-picker' && github.ref == 'refs/heads/main'
         run: |
-          yarn ci:publish
+          npm ci:publish
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
