@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import {DemoButton, DemoResponse, DemoTitle} from './components';
 
-import * as ImagePicker from 'react-native-image-picker';
+import * as ImagePicker from 'rn-image-picker';
 
 /* toggle includeExtra */
 const includeExtra = true;
