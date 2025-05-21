@@ -41,10 +41,10 @@
   "devDependencies": {
     "@react-native-community/bob": "0.17.1",
     "@semantic-release/git": "10.0.1",
-    "@types/react": "18.2.13",
-    "@types/react-native": "0.72.2",
-    "semantic-release": "21.0.5",
-    "typescript": "5.2.2"
+    "@types/react": "19.1.4",
+    "@types/react-native": "0.73.0",
+    "semantic-release": "24.2.4",
+    "typescript": "5.8.3"
   },
   "@react-native-community/bob": {
     "source": "src",
@@ -60,6 +60,5 @@
     "android": {
       "javaPackageName": "com.imagepicker"
     }
-  },
-  "packageManager": "yarn@1.22.21+sha1.1959a18351b811cdeedbd484a8f86c3cc3bbaf72"
+  }
 }
