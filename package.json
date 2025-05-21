@@ -1,6 +1,6 @@
 {
-  "name": "react-native-image-picker",
-  "version": "8.2.1",
+  "name": "rn-image-picker",
+  "version": "1.0.1",
   "description": "A React Native module that allows you to use native UI to select media from the device library or directly from the camera",
   "react-native": "src/index.ts",
   "main": "src/index.ts",
@@ -13,14 +13,14 @@
     "/src",
     "/lib"
   ],
-  "author": "Johan du Toit (Johan-dutoit)",
-  "homepage": "https://github.com/react-native-image-picker/react-native-image-picker",
+  "author": "Bernardo Amaral",
+  "homepage": "https://github.com/bernardo-amaral/rn-image-picker",
   "license": "MIT",
   "scripts": {
     "start": "react-native start",
-    "example": "yarn --cwd example",
+    "example": "npm --cwd example",
     "prepare": "bob build",
-    "ci:publish": "yarn semantic-release"
+    "ci:publish": "npm semantic-release"
   },
   "keywords": [
     "react-native",
@@ -36,7 +36,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/react-native-image-picker/react-native-image-picker.git"
+    "url": "https://github.com/bernardo-amaral/rn-image-picker.git"
   },
   "devDependencies": {
     "@react-native-community/bob": "0.17.1",
@@ -60,5 +60,6 @@
     "android": {
       "javaPackageName": "com.imagepicker"
     }
-  }
+  },
+  "packageManager": "yarn@1.22.21+sha1.1959a18351b811cdeedbd484a8f86c3cc3bbaf72"
 }
