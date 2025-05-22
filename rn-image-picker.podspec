@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.homepage     = package['homepage']
   s.platform     = :ios, "9.0"
 
-  s.source       = { :git => "https://github.com/bernardo-amaral/rn-image-picker.git", :tag => "v#{s.version}" }
+  s.source       = { :git => "https://github.com/bernardo-amaral/react-native-photos.git", :tag => "v#{s.version}" }
   s.source_files  = "ios/*.{h,m,mm}"
 
   s.resource_bundles = {

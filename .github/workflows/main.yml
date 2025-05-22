@@ -34,7 +34,7 @@ jobs:
           npm run build
 
       - name: Publish to NPM
-        if: github.repository == 'bernardo-amaral/rn-image-picker' && github.ref == 'refs/heads/main'
+        if: github.repository == 'bernardo-amaral/react-native-photos' && github.ref == 'refs/heads/main'
         run: |
           npm run ci:publish
         env:

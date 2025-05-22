@@ -1,5 +1,5 @@
 {
-  "name": "rn-image-picker",
+  "name": "react-native-photos",
   "version": "1.0.1",
   "description": "A React Native module that allows you to use native UI to select media from the device library or directly from the camera",
   "react-native": "src/index.ts",
@@ -14,7 +14,7 @@
     "/lib"
   ],
   "author": "Bernardo Amaral",
-  "homepage": "https://github.com/bernardo-amaral/rn-image-picker",
+  "homepage": "https://github.com/bernardo-amaral/react-native-photos",
   "license": "MIT",
   "scripts": {
     "start": "react-native start",
@@ -24,7 +24,7 @@
   },
   "keywords": [
     "react-native",
-    "rn-image-picker",
+    "react-native-photos",
     "react",
     "native",
     "image",
@@ -36,7 +36,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bernardo-amaral/rn-image-picker.git"
+    "url": "https://github.com/bernardo-amaral/react-native-photos.git"
   },
   "devDependencies": {
     "@react-native-community/bob": "0.17.1",

@@ -1,11 +1,11 @@
-# rn-image-picker
+# react-native-photos
 
 A React Native module that allows you to select a photo/video from the device library or camera.
 
 ## Installation
 
 ```bash
-npm i rn-image-picker
+npm i react-native-photos
 ```
 
 ### New Architecture
@@ -67,7 +67,7 @@ For more details, consult the Android documentation on AndroidX Photo Picker: [h
 ## Methods
 
 ```js
-import {launchCamera, launchImageLibrary} from 'rn-image-picker';
+import {launchCamera, launchImageLibrary} from 'react-native-photos';
 ```
 
 ### `launchCamera()`
