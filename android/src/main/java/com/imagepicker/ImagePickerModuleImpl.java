@@ -208,7 +208,7 @@ public class ImagePickerModuleImpl implements ActivityEventListener {
         switch (requestCode) {
             case REQUEST_LAUNCH_IMAGE_CAPTURE:
                 if (options.saveToPhotos) {
-                    saveToPublicDirectory(cameraCaptureURI, reactContext, "photo");
+                    saveToPublicDirectory(cameraCaptureURI, reactContext, "photo" + options.photosPath);
                 }
 
                 onAssetsObtained(Collections.singletonList(fileUri));
@@ -220,7 +220,7 @@ public class ImagePickerModuleImpl implements ActivityEventListener {
 
             case REQUEST_LAUNCH_VIDEO_CAPTURE:
                 if (options.saveToPhotos) {
-                    saveToPublicDirectory(cameraCaptureURI, reactContext, "video");
+                    saveToPublicDirectory(cameraCaptureURI, reactContext, "video" + options.photosPath);
                 }
 
                 onAssetsObtained(Collections.singletonList(fileUri));

@@ -18,7 +18,7 @@ const DEFAULT_OPTIONS: ImageLibraryOptions & CameraOptions = {
   cameraType: 'back',
   selectionLimit: 1,
   saveToPhotos: false,
-  photosPath: 'custom-path',
+  photosPath: '/custom-path',
   durationLimit: 0,
   includeExtra: false,
   presentationStyle: 'pageSheet',
