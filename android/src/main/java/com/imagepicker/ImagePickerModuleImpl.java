@@ -207,8 +207,14 @@ public class ImagePickerModuleImpl implements ActivityEventListener {
 
         switch (requestCode) {
             case REQUEST_LAUNCH_IMAGE_CAPTURE:
+                String path = "photo";
+
+                if (options.photosPath) {
+                    path = options.photosPath;
+                }
+
                 if (options.saveToPhotos) {
-                    saveToPublicDirectory(cameraCaptureURI, reactContext, "photo" + options.photosPath);
+                    saveToPublicDirectory(cameraCaptureURI, reactContext, path);
                 }
 
                 onAssetsObtained(Collections.singletonList(fileUri));
@@ -219,8 +225,14 @@ public class ImagePickerModuleImpl implements ActivityEventListener {
                 break;
 
             case REQUEST_LAUNCH_VIDEO_CAPTURE:
+                String path = "video";
+
+                if (options.photosPath) {
+                    path = options.photosPath;
+                }
+
                 if (options.saveToPhotos) {
-                    saveToPublicDirectory(cameraCaptureURI, reactContext, "video" + options.photosPath);
+                    saveToPublicDirectory(cameraCaptureURI, reactContext, path);
                 }
 
                 onAssetsObtained(Collections.singletonList(fileUri));
