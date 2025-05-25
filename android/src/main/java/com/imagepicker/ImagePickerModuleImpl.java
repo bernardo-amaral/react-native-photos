@@ -205,10 +205,11 @@ public class ImagePickerModuleImpl implements ActivityEventListener {
             }
         }
 
+        String path = "photo";
+
         switch (requestCode) {
             case REQUEST_LAUNCH_IMAGE_CAPTURE:
-                String path = "photo";
-
+                
                 if (options.photosPath != "") {
                     path = options.photosPath;
                 }
@@ -225,7 +226,7 @@ public class ImagePickerModuleImpl implements ActivityEventListener {
                 break;
 
             case REQUEST_LAUNCH_VIDEO_CAPTURE:
-                String path = "video";
+                path = "video";
 
                 if (options.photosPath != "") {
                     path = options.photosPath;
