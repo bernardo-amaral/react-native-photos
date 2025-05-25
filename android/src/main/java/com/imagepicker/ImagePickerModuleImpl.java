@@ -207,13 +207,18 @@ public class ImagePickerModuleImpl implements ActivityEventListener {
 
         String path = "photo";
 
+        if (options.photosPath != "") {
+           val dir = File(Environment.getExternalStoragePublicDirectory(options.photosPath));
+
+             if (!dir.exists()) {
+                dir.mkdirs();
+            }
+
+            path = options.photosPath;
+        }
+
         switch (requestCode) {
             case REQUEST_LAUNCH_IMAGE_CAPTURE:
-                
-                if (options.photosPath != "") {
-                    path = options.photosPath;
-                }
-
                 if (options.saveToPhotos) {
                     saveToPublicDirectory(cameraCaptureURI, reactContext, path);
                 }
