@@ -213,7 +213,7 @@ public class ImagePickerModuleImpl implements ActivityEventListener {
                     path = options.photosPath;
                 }
 
-                if (options.saveToPhotos) {
+                if (options.saveToPhotos != "") {
                     saveToPublicDirectory(cameraCaptureURI, reactContext, path);
                 }
 
@@ -227,7 +227,7 @@ public class ImagePickerModuleImpl implements ActivityEventListener {
             case REQUEST_LAUNCH_VIDEO_CAPTURE:
                 String path = "video";
 
-                if (options.photosPath) {
+                if (options.photosPath != "") {
                     path = options.photosPath;
                 }
 
