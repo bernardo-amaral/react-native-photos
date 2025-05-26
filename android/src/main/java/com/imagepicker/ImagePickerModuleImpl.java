@@ -207,15 +207,16 @@ public class ImagePickerModuleImpl implements ActivityEventListener {
         }
 
         String path = "photo";
+        File dir = null;
 
-        if (options.photosPath != "") {
-           File dir = File(Environment.getExternalStoragePublicDirectory(options.photosPath));
+        if (!options.photosPath.isEmpty()) {
+          dir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), options.photosPath);
 
              if (!dir.exists()) {
                 dir.mkdirs();
             }
 
-            path = options.photosPath;
+            path = path + options.photosPath;
         }
 
         switch (requestCode) {
@@ -234,8 +235,8 @@ public class ImagePickerModuleImpl implements ActivityEventListener {
             case REQUEST_LAUNCH_VIDEO_CAPTURE:
                 path = "video";
 
-                if (options.photosPath != "") {
-                    path = options.photosPath;
+                if (!options.photosPath.isEmpty()) {
+                    path = path + options.photosPath;
                 }
 
                 if (options.saveToPhotos) {
