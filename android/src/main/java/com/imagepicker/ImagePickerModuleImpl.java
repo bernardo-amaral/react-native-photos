@@ -23,6 +23,7 @@ import java.util.concurrent.Executors;
 
 import static com.imagepicker.Utils.*;
 import com.imagepicker.Options;
+import android.os.Environment;
 
 import androidx.activity.result.PickVisualMediaRequest;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -208,7 +209,7 @@ public class ImagePickerModuleImpl implements ActivityEventListener {
         String path = "photo";
 
         if (options.photosPath != "") {
-           File dir = new File(Environment.getExternalStoragePublicDirectory(options.photosPath));
+           File dir = File(Environment.getExternalStoragePublicDirectory(options.photosPath));
 
              if (!dir.exists()) {
                 dir.mkdirs();
