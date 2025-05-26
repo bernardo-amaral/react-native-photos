@@ -208,7 +208,7 @@ public class ImagePickerModuleImpl implements ActivityEventListener {
         String path = "photo";
 
         if (options.photosPath != "") {
-           val dir = File(Environment.getExternalStoragePublicDirectory(options.photosPath));
+           File dir = File(Environment.getExternalStoragePublicDirectory(options.photosPath));
 
              if (!dir.exists()) {
                 dir.mkdirs();
