@@ -5,6 +5,7 @@ import {
   ImageLibraryOptions,
   Callback,
   ImagePickerResponse,
+  FileLibraryOptions,
 } from '../types';
 
 const DEFAULT_OPTIONS: ImageLibraryOptions & CameraOptions = {
@@ -32,6 +33,8 @@ const nativeImagePicker = isTurboModuleEnabled
   ? require('./NativeImagePicker').default
   : NativeModules.ImagePicker;
 
+const nativeFilePicker = NativeModules.FilePicker;
+
 export function camera(
   options: CameraOptions,
   callback?: Callback,
@@ -55,6 +58,21 @@ export function imageLibrary(
     nativeImagePicker.launchImageLibrary(
       {...DEFAULT_OPTIONS, ...options},
       (result: ImagePickerResponse) => {
+        if (callback) callback(result);
+        resolve(result);
+      },
+    );
+  });
+}
+
+export function fileLibrary(
+  options: FileLibraryOptions,
+  callback?: Callback,
+): Promise<any> {
+  return new Promise((resolve) => {
+    nativeFilePicker.showFilePicker(
+      {...DEFAULT_OPTIONS, ...options},
+      (result: any) => {
         if (callback) callback(result);
         resolve(result);
       },

@@ -25,6 +25,11 @@ export interface ImageLibraryOptions extends OptionsCommon {
   restrictMimeTypes?: string[];
 }
 
+export interface FileLibraryOptions extends OptionsCommon {
+  selectionLimit?: number;
+  restrictMimeTypes?: string[];
+}
+
 export interface CameraOptions extends OptionsCommon {
   durationLimit?: number;
   saveToPhotos?: boolean;
