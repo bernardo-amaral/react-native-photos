@@ -67,7 +67,11 @@ For more details, consult the Android documentation on AndroidX Photo Picker: [h
 ## Methods
 
 ```js
-import {launchCamera, launchImageLibrary} from 'react-native-photos';
+import {
+  launchCamera,
+  launchImageLibrary,
+  launchFileLibrary,
+} from 'react-native-photos';
 ```
 
 ### `launchCamera()`
@@ -94,6 +98,17 @@ launchImageLibrary(options?, callback)
 
 // You can also use as a promise without 'callback':
 const result = await launchImageLibrary(options?);
+```
+
+### `launchFileLibrary`
+
+Launch gallery to pick image or video.
+
+```js
+launchFileLibrary(options?, callback)
+
+// You can also use as a promise without 'callback':
+const result = await launchFileLibrary(options?);
 ```
 
 See [Options](#options) for further information on `options`.
