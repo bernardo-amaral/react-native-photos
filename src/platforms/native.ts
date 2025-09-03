@@ -69,7 +69,16 @@ export function fileLibrary(
   options: FileLibraryOptions,
   callback?: Callback,
 ): Promise<any> {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
+    if (
+      !nativeFilePicker ||
+      typeof nativeFilePicker.showFilePicker !== 'function'
+    ) {
+      const error = new Error('FilePicker native module is not available.');
+      if (callback) callback(error as any);
+      reject(error);
+      return;
+    }
     nativeFilePicker.showFilePicker(
       {...DEFAULT_OPTIONS, ...options},
       (result: any) => {
